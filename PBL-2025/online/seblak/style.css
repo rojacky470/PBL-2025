@@ -4,6 +4,7 @@ body {
   font-family: 'Poppins', sans-serif;
   color: #333;
   background-color: #070707;
+  height: 2000px; /* buat halaman bisa di-scroll ke bawah */
 }
 
 /* Header */
@@ -20,16 +21,46 @@ header {
   font-weight: bold;
   font-size: 20px;
 }
-
+ .navbar {
+      position: sticky;
+      top: 0;
+      background-color: #ffeb3b;
+      display: flex;
+      overflow-x: auto; /* bisa di-scroll ke samping */
+      white-space: nowrap;
+      padding: 10px;
+      border-bottom: 2px solid #ccc;
+      z-index: 10;
+    }
 nav a {
   color: white;
   margin-left: 20px;
   text-decoration: none;
   font-weight: 500;
+  display: inline-block;
+      padding: 10px 20px;
+      margin-right: 5px;
+      background-color: #fff59d;
+      border-radius: 10px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      transition: background-color 0.2s;
+      flex: 0 0 auto; /* jangan mengecil */
 }
 
 nav a:hover {
   text-decoration: underline;
+  background-color: #fdd835;
+    }
+
+    /* Tambahan gaya untuk scrollbar */
+    .navbar::-webkit-scrollbar {
+      height: 6px;
+    }
+    .navbar::-webkit-scrollbar-thumb {
+      background: #fbc02d;
+      border-radius: 3px;
 }
 
 /* Hero Section */
